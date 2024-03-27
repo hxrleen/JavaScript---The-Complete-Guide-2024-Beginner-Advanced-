@@ -14,7 +14,7 @@ function add()
 {
     const parsedNum = getUserInput();
     const curr =currentResult;
-    currentResult = currentResult+ parsedNum;
+    currentResult += parsedNum;
     const calcDescription = outputDescription(curr,'+',currentResult);
     outputResult(currentResult,calcDescription);
 }
@@ -25,7 +25,7 @@ function subtract()
 {
     const parsedNum = getUserInput();
     const curr =currentResult;
-    currentResult = currentResult - parsedNum;
+    currentResult -= parsedNum;
     const calcDescription = outputDescription(curr,'-',currentResult);
     outputResult(currentResult,calcDescription);
 }
@@ -37,7 +37,7 @@ function multiply()
 {
     const parsedNum = getUserInput();
     const curr =currentResult;
-    currentResult = currentResult * parsedNum;
+    currentResult *= parsedNum;
     const calcDescription = outputDescription(curr,'*',currentResult);
     outputResult(currentResult,calcDescription);
 }
@@ -49,7 +49,7 @@ function divide()
 {
     const parsedNum = getUserInput();
     const curr =currentResult;
-    currentResult = currentResult/ parsedNum;
+    currentResult /= parsedNum;
     const calcDescription = outputDescription(curr,'/',currentResult);
     outputResult(currentResult,calcDescription);
 }
