@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="icon" href="favicon.png">
+  <link href="/assets/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div>
+        <table id="table">
+            <colgroup>
+                <col/>
+                <col/>
+                <col/>
+                <col/>
+                
+            </colgroup>
+            <tr>
+                <th><span></span>&nbsp&nbspCOUNTRY</th>
+                <th><span></span>&nbsp&nbspLOCATION</th>
+                <th><span></span>&nbsp&nbspBALANCE</th>
+                <th><span></span>&nbsp&nbspDATE</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        //eventlistener on page load
+        document.addEventListener( "DOMContentLoaded", get_json_data, false ); 
+
+        function get_json_data(){
+            //json file
+            var json_url = '/assets/example.json';
+
+            // XMLHttpRequest/AJAX request
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() { 
+                if (this.readyState == 4 && this.status == 200) {//good response
+
+                    var data = JSON.parse(this.responseText); // convert the response to a json object
+                    append_json(data);// pass the json object to the append_json function
+                }
+            }
+
+            xmlhttp.open("GET", json_url, true);
+            xmlhttp.send();
+        }
+
+        //json data to table 
+        function append_json(data){
+            var table = document.getElementById('table');
+            data.forEach(function(object) {
+                var tr = document.createElement('tr');
+                tr.innerHTML = '<td>' + object.COUNTRY + '</td>' +
+                '<td>' + object.LoC + '</td>' +
+                '<td>' + object.BALANCE + '</td>' +
+                '<td>' + object.DATE + '</td>';
+                table.appendChild(tr);
+            });
+        }
+    </script>
+
+
+
+</body>
+</html>
+
+
+
+
