@@ -1,5 +1,6 @@
 form {
     border: 3px solid #f1f1f1;
+
   }
   
   input[type=text], input[type=password] {
@@ -12,7 +13,7 @@ form {
   }
   
   button {
-    background-color: #04AA6D;
+    background-color: #0452aa;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -26,31 +27,24 @@ form {
     opacity: 0.8;
   }
   
-  /* Extra style for the cancel button (red) */
-  .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-  }
+ 
   
-  /* Center the avatar image inside this container */
+  
   .imgcontainer {
-    text-align: center;
+    text-align:center;
     margin: 24px 0 12px 0;
   }
   
-  /* Avatar image */
   img.avatar {
     width: 40%;
     border-radius: 50%;
   }
   
-  /* Add padding to containers */
   .container {
-    padding: 16px;
+    padding: 24px;
     height: 100%;
-    margin:8% auto;
-    width: 40%;
+    margin:5% auto;
+    width: 80%;
   }
   
   
@@ -69,4 +63,110 @@ form {
     .cancelbtn {
       width: 100%;
     }
+  }
+
+
+
+  #crud {
+    margin: 20px;
+  }
+  
+  #searchInput {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  #table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #table th, #table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  #table th {
+    background-color: #f2f2f2;
+  }
+  
+  #table tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .action-buttons button {
+    padding: 8px 12px;
+    margin: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .action-buttons .edit-btn {
+    background-color: #fddb3a; /* Yellow */
+  }
+
+  .action-buttons .add-btn {
+    background-color: #34d657; /* Yellow */
+  }
+  
+  .action-buttons .delete-btn {
+    background-color: #f76c6c; /* Red */
+  }
+  
+  .action-buttons button:hover {
+    opacity: 0.9;
+  }
+  
+ 
+
+  /* Modal */
+
+
+  
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
   }

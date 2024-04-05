@@ -9,29 +9,295 @@
   <link href="assets/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <form id="form" method="get" action="html/crud.html">
-        <div class="imgcontainer">
-          <h1>Login</h1>
-        </div>
-      
-        <div class="container">
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" id="email" required>
-      
-          <label for="password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="password" id="password" required>
-          <button type="submit">Submit</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
+   <div class="container">
+        <form id="form">
+            
+            <div class="imgcontainer">
+            <h1>Login</h1>
+            </div>
+        
+            <div class="container">
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email">
+        
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" id="password">
+            <span id="error"></span>
+            <button class="button" type="submit">Submit</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
 
+            </div>
+        
+        </form>
+
+
+        <div id="crud">
+
+            <table id="table">
+                <button class="add-btn .action-buttons" id="addbtn" style="background-color: #36d770; width: 15%;margin-left: 85%;">Add</button>
+
+                <colgroup>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    
+                </colgroup>
+                <tr>
+                    <th><span></span>Sr.No</th>
+                    <th><span></span>COUNTRY</th>
+                    <th><span></span>LOCATION</th>
+                    <th><span></span>BALANCE</th>
+                    <th><span></span>DATE</th>
+                    <th><span></span>ACTION</th>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+
+
+    <!--Modal ADD-->
+
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+          <h3>Add New Record</h3>
+            <form id="crudform">
+            <div>
+                <label for="country">COUNTRY:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+            <div>
+                <label for="location">LOCATION:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div>
+                <label for="balance">BALANCE:</label>
+                <input type="text" id="balance" name="balance" required>
+            </div>
+            <div>
+                <label for="date">DATE:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <button type="submit">Submit</button>
+            </form>
         </div>
       
-      </form>
-    <script src="assets/app.js"></script>
+      </div>
+   
+
+
+       <!--Modal Update-->
+
+    <div id="upModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+          <h3>Update Record</h3>
+            <form id="crudform1">
+            <div>
+                <label for="country">COUNTRY:</label>
+                <input type="text" id="country1" name="country1" required>
+            </div>
+            <div>
+                <label for="location">LOCATION:</label>
+                <input type="text" id="location1" name="location1" required>
+            </div>
+            <div>
+                <label for="balance">BALANCE:</label>
+                <input type="text" id="balance1" name="balance1" required>
+            </div>
+            <div>
+                <label for="date">DATE:</label>
+                <input type="date" id="date1" name="date1" required>
+            </div>
+            <button type="submit">Submit</button>
+            </form>
+        </div>
+      
+      </div>
+   
+
+
+
+       
     <script>
-           
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+                var form = document.getElementById("form");
+                var crud =document.getElementById("crud");
+
+                crud.style.display ="none";                              // uncomment
+                //form.style.display="none";                                  //remove
+
+                    // Load user data from user.json
+                    fetch("assets/user.json")
+                        .then(response => response.json())
+                        .then(users => {
+                        const form = document.getElementById("form");
+                        form.addEventListener("submit", function(event) {
+                            event.preventDefault();
+                            const email = document.getElementById("email").value;
+                            const password = document.getElementById("password").value;
+                            
+                            let x = document.forms["form"]["email"].value;
+                            let y = document.forms["form"]["password"].value;
+                            var error = document.getElementById("error");
+                            if(x=="" && y=="")
+                            {
+                                error.textContent = "Please fill the form first"
+                                error.style.color = "red"   
+                                return false;
+                            }
+                            else{
+                                    if (x == "") {
+                                        error.textContent = "Email must be filled out"
+                                        error.style.color = "red"   
+                                        return false; 
+                                    }
+                                    else if(y=="")
+                                    {
+                                        error.textContent = "Password must be filled out"
+                                        error.style.color = "red";   
+                                        return false;
+                                    }
+                                    else{
+
+                                        // Check if the entered credentials match any user in the user.json file
+                                        const isValidUser = users.some(function(user) {
+                                        return user.email === email && user.password === password;
+                                        });
+
+                                        if (isValidUser) {
+                                            alert("Login successful!");
+                                            form.style.display="none";
+                                            crud.style.display="block";
+                                        } else {
+                                            error.textContent = "Invalid email or password"
+                                            error.style.color = "red";   
+                                        }
+                                        
+                                    }
+                                }
+                            
+                        });
+                        })
+                        .catch(error => console.error("Error:", error));
+                    });
+
+        //eventlistener on page load
+        document.addEventListener( "DOMContentLoaded", get_json_data, false ); 
+
+        function get_json_data(){
+            //json file
+            var json_url = '/assets/example.json';
+
+            // XMLHttpRequest/AJAX request
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() { 
+                if (this.readyState == 4 && this.status == 200) {//good response
+
+                    var data = JSON.parse(this.responseText); // convert the response to a json object
+                    append_json(data);// pass the json object to the append_json function
+                }
+            }
+
+            xmlhttp.open("GET", json_url, true);
+            xmlhttp.send();
+        }
+
+        //json data to table 
+        function append_json(data) {
+    var table = document.getElementById('table');
+    data.forEach(function(object) {
+        var tr = document.createElement('tr');
+        tr.innerHTML = '<td>' + object.SR + '</td>' +
+                       '<td>' + object.COUNTRY + '</td>' +
+                       '<td>' + object.LoC + '</td>' +
+                       '<td>' + object.BALANCE + '</td>' +
+                       '<td>' + object.DATE + '</td>' +
+                       '<td class="action-buttons">' +
+                           '<button class="edit-btn">Edit</button>' +
+                           '<button class="delete-btn" onclick="confirmDelete()">Delete</button>' +
+                       '</td>';
+        table.appendChild(tr);
+        tr.querySelector('.edit-btn').addEventListener('click', function() {
+            editModal();
+        });
+    });
+}
+
+function editModal(){
+    var upmodal = document.getElementById("upModal");
+    upmodal.style.display = "block";
+
+        // When the user clicks on <span> (x), close the upmodal
+        span.onclick = function() {
+        upmodal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the upmodal, close it
+        window.onclick = function(event) {
+            if (event.target == upmodal) {
+                upmodal.style.display = "none";
+            }
+        }
+}
+
+function confirmDelete() {
+    var confirmDelete = confirm("Are you sure you want to delete this record?");
+    if (confirmDelete) {
+        alert("Record deleted!");
+    } else {
+        alert("Delete operation cancelled.");
+    }
+}
+
     </script>
+
+
+    <script>
+        //Modal Logic
+
+
+        var modal = document.getElementById("addModal");
+        var btn = document.getElementById("addbtn");
+
+       
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+        modal.style.display = "block";
+        }
+
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+    </script>
+
+    <script src="assets/app.js"></script>
+    <script type="text/javascript" src="assets/user.json"></script>
 </body>
 </html>
 
