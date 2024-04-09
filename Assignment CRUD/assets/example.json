@@ -1,6 +1,6 @@
 [
-    { "SR":"1","COUNTRY":"UK", "LoC":"London", "BALANCE":"78,573", "DATE":"1/06/2018" },
-    { "SR":"2","COUNTRY":"US", "LoC":"New York", "BALANCE":"43,568", "DATE":"18/05/2018" },
-    { "SR":"3","COUNTRY":"PL", "LoC":"Kraków", "BALANCE":"12,362", "DATE":"22/06/2018" },
-    { "SR":"4","COUNTRY":"AU", "LoC":"Townsville", "BALANCE":"7,569", "DATE":"1/07/2018" }
+    { "SR":"1","EMAIL":"abc", "PASS":"123", "AGE":"7" },
+    { "SR":"2","EMAIL":"xyz", "PASS":"New", "AGE":"43"},
+    { "SR":"3","EMAIL":"lmn", "PASS":"hhhh", "AGE":"12"},
+    { "SR":"4","EMAIL":"efg", "PASS":"apple", "AGE":"23"}
   ]
