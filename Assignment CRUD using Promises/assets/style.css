@@ -1,0 +1,228 @@
+  form {
+    border: 3px solid #f1f1f1;
+
+  }
+  
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #0452aa;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /*  hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .imgcontainer {
+    text-align:center;
+    margin: 12px 0 12px 0;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    height: 100%;
+    margin:5% auto;
+    width: 80%;
+  }
+  
+  .container h1{
+    text-align: center;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+
+
+
+  #crud {
+    margin: 20px;
+  }
+  
+  #searchInput {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  #table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #table th, #table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  #table th {
+    background-color: #f2f2f2;
+  }
+  
+  #table tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .action-buttons button {
+    padding: 8px 12px;
+    margin: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+ .edit-btn {
+    background-color: #fddb3a; /* Yellow */
+    padding: 8px 12px;
+    margin: 12px;
+    width: 25%;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .action-buttons .add-btn {
+    background-color: #34d657; /* Green */
+  }
+  
+  .delete-btn {
+    background-color: #f76c6c; /* Red */
+    padding: 8px 12px;
+    margin: 12px;
+    width: 25%;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .action-buttons button:hover {
+    opacity: 0.9;
+  }
+  
+ 
+
+  /* Modal */
+
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  /* Navbar */
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 5px;
+    width: 100%;
+
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  
+  }
+  
+  .active {
+    background-color: #255e9b;
+  }
+
+  
+/* show highlighted row */
+
+.highlighted {
+  background-color: #ffff99; /* Yellow background */
+}

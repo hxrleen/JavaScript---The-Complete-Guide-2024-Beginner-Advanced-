@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" href="favicon.png" />
+    <link href="assets/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="form">
+        <div class="imgcontainer">
+          <h1>Login</h1>
+        </div>
+        <div class="container">
+          <label for="email"><b>Email</b></label>
+          <input
+            type="text"
+            placeholder="Enter Email"
+            name="email"
+            id="email"
+          />
+          <label for="password"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="password"
+            id="password"
+          />
+          <span id="error"></span>
+          <button class="button" id="loginFormSubmit" type="button">
+            Submit
+          </button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+          </label>
+        </div>
+      </form>
 
+      <div id="tablecrud" style="display: none">
+        <div class="nav">
+          <ul>
+            <li><a id="hello"></a></li>
+            <li style="float: right">
+              <a class="logout-link" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+
+        <div id="crud">
+          <h1>CRUD Operations</h1>
+          <table id="table">
+            <button
+              class="add-btn action-buttons"
+              id="addbtn"
+              style="background-color: #36d770; width: 15%; margin-left: 85%"
+            >
+              Add
+            </button>
+            <colgroup>
+              <col />
+              <col />
+              <col />
+              <col />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span>Sr.No</span></th>
+              <th><span>Unique ID</span></th>
+              <th><span>Email</span></th>
+              <th><span>Age</span></th>
+              <th><span>ACTION</span></th>
+            </tr>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!--Modal ADD-->
+    <div id="addModal" class="modal">
+      <div class="modal-content">
+        <span id="closeAdd" class="close">&times;</span>
+        <h3>Add New Record</h3>
+        <form id="crudform">
+          <div>
+            <label for="email1">Email:</label>
+            <input type="text" id="email1" name="email1" required />
+          </div>
+          <div>
+            <label for="password1">PASSWORD:</label>
+            <input type="text" id="password1" name="password1" required />
+          </div>
+          <div>
+            <label for="age1">AGE:</label>
+            <input type="text" id="age1" name="age1" required />
+          </div>
+          <button id="add-btn">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <!--Modal Update-->
+    <div id="upModal" class="modal">
+      <div class="modal-content">
+        <span id="closeUpdate" class="close">&times;</span>
+        <h3>Update Record</h3>
+        <form id="crudform1">
+          <div>
+            <label for="email2">Email:</label>
+            <input type="text" id="email2" name="email2" />
+          </div>
+          <div>
+            <label for="password2">Password:</label>
+            <input type="text" id="password2" name="password2" />
+          </div>
+          <div>
+            <label for="age2">Age:</label>
+            <input type="text" id="age2" name="age2" />
+          </div>
+          <button id="update-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="assets/script.js"></script>
+  </body>
+</html>
