@@ -180,6 +180,9 @@ const charts = Highcharts.chart('container4', {
        zoomType: 'xy',
        
      },
+     credits: {
+        enabled: false
+     },
       title : {
         text: 'Monthly Average Temperature'   
       },
