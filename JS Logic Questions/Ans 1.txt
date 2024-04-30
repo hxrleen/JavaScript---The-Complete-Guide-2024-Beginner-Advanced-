@@ -1,1 +1,20 @@
 
+const newArray = arr.map((item) => {
+    const newObject = { ...item };
+    for (let key in item) {
+        // newObject.key = DataObject[item.key];
+        // newObject.data = DataObject[item.key];
+        // newObject.secondKey = DataObject[item.key];
+        newObject[key] = DataObject[item[key]];
+
+    }
+
+    return newObject;
+});
+
+// console.log(newArray);
+
+arr = newArray;
+
+console.log('arr =', arr);
+
