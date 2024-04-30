@@ -1,1 +1,27 @@
+let arr = [{
+    key: 1,
+    data: 5,
+    secondKey: 9
+}];
 
+
+let DataObject = {
+    1: {
+        infoKey: "some-info-for-key-1"
+    },
+    2: {
+        infoKey: "some-info-for-key-2"
+    },
+    3: {
+        infoKey: "some-info-for-key-3"
+    },
+    4: {
+        infoKey: "some-info-for-key-4"
+    },
+    5: {
+        infoKey: "some-info-for-key-5"
+    },
+    9: {
+        infoKey: "some-info-for-key-9"
+    }
+};
