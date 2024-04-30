@@ -1,1 +1,21 @@
 
+let sum = 0;
+
+for (let key in obj1) {
+    sum += obj1[key];
+
+}
+
+for (let key in obj2) {
+    sum += obj2[key];
+
+}
+
+
+let merged = { ...obj1, ...obj2 };
+
+for (let key in merged) {
+    merged[key] = sum;
+}
+
+console.log(merged);
