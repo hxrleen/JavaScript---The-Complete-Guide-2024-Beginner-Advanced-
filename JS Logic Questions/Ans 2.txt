@@ -1,1 +1,5 @@
+StrArr = arr.map(JSON.stringify);
+uniqueSet = new Set(StrArr);
+uniqueArray = Array.from(uniqueSet).map(JSON.parse);
 
+console.log(uniqueArray);
