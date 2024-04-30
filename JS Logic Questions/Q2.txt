@@ -1,1 +1,38 @@
+let arr = [{
+    key: 1,
+    data: 5
+}, {
+    key: 2,
+    data: 8
+}, {
+    key: 1,
+    data: 5
+}, {
+    key: 3,
+    data: 5
+}, {
+    key: 1,
+    data: 5
+}, {
+    key: 2,
+    data: 8
+}];
+
+
+/* 
+
+Required output
+
+arr = [{
+    key: 1,
+    data: 5
+}, {
+    key: 2,
+    data: 8
+}, {
+    key: 3,
+    data: 5
+}];    
+
+*/
 
