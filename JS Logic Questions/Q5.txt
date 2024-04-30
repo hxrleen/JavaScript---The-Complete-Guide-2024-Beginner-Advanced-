@@ -1,1 +1,26 @@
 
+
+
+let obj1 = {
+    key1: 1,
+    key2: 2,
+    key3: 10
+};
+
+let obj2 = {
+    key3: 3,
+    key4: 4
+};
+
+
+/*
+
+output:
+newObj = {
+    key1: 1,
+    key2: 2,
+    key3: 10,
+    key4: 4
+};
+
+*/
