@@ -1,1 +1,22 @@
 
+
+let newObj = {};
+
+
+for (let key in obj1) {
+    if (!(key in newObj)) {
+        newObj[key] = obj1[key];
+    }
+}
+
+
+
+for (let key in obj2) {
+    if (!(key in newObj)) {
+        newObj[key] = obj2[key];
+    }
+}
+
+
+console.log(newObj);
+
