@@ -15,7 +15,7 @@ let obj2 = {
 
 /*
 
-output:
+Required output:
 newObj = {
     key1: 1,
     key2: 2,
