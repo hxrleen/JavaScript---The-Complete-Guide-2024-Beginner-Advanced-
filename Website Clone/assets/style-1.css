@@ -372,6 +372,9 @@ div {
 
 /* SERVICES */
 
+.main-container {
+  height: 500px;
+}
 .services {
   height: 250px;
   width: 100%;
@@ -397,8 +400,12 @@ div {
 }
 
 .services-container {
-  height: 550px;
   background-color: #ffff;
+  width: 100%;
+  height: 750px;
+  /* position: relative; */
+  overflow-x: hidden;
+  overflow-y: clip;
 }
 
 .services-container-dark {
@@ -407,11 +414,13 @@ div {
 }
 
 .services-card {
-  margin: 100px 70px;
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1.5fr;
   grid-gap: 140px;
+  margin: auto;
+  padding: 5%;
+  /* margin: 100px 150px; */
+  grid-template-columns: 1.5fr 1.5fr;
 }
 
 .services-card-dark {
@@ -443,8 +452,8 @@ div {
 }
 
 .services-text p {
-  font-size: 20px;
-  text-align: right;
+  font-size: 16px;
+  text-align: left;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
 }
 
@@ -452,15 +461,6 @@ div {
   position: absolute;
   padding-top: 25px;
   margin-left: 150px;
-}
-
-.img-service {
-  height: 600px;
-  width: 500px;
-  margin-top: 50px;
-
-  border-radius: 25px;
-  margin-left: 50%;
 }
 
 .img-service-dark {
@@ -473,8 +473,8 @@ div {
 }
 
 .service-card-heading {
-  font-size: 40px;
-  text-align: right;
+  font-size: 34px;
+  text-align: left;
   font-family: MarkOT-Bold;
 }
 
@@ -486,13 +486,12 @@ div {
 }
 
 .contacto-btn {
-  align-items: end;
   background: #f01a6d;
   border: none;
-  padding: 10%;
+  padding: 2%;
   color: white;
   font-size: 14px;
-  font-family: sans-serif;
+  font-family: "MarkOT-Regular";
   border-radius: 5px;
 }
 
