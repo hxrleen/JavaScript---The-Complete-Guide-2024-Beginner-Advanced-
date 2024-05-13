@@ -1,0 +1,122 @@
+@use "mixin";
+@import "colors.scss";
+@import "font.scss";
+
+body {
+  margin: 0px;
+}
+
+.image {
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/33f55b111202195.5ffdfc0e91b0e.gif);
+  background-size: cover;
+  height: 500px;
+}
+
+header {
+  color: #000;
+  background-image: $grey;
+  text-align: center;
+  align-content: center;
+  font-family: "Verdana";
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+}
+
+.button {
+  @include mixin.button;
+}
+
+.error {
+  @include mixin.error;
+}
+
+.submit {
+  @include mixin.submit;
+}
+
+.navbar {
+  padding: 0px;
+  width: 100%;
+  background: #a9a9a94d;
+  height: 100px;
+  margin: 2% auto;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar > ul > li {
+  white-space: nowrap;
+  padding: 10px 0 10px 28px;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3px;
+  font-family: $font-famliy1;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: $darkgrey;
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar > ul > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: $red;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover:before,
+.navbar li:hover > a:before,
+.navbar .active:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+  color: $black;
+}
+
+@media (min-width: 1280px) and (max-width: 1366px) {
+  .navbar ul {
+    left: -90%;
+  }
+
+  .navbar > ul {
+    left: -100%;
+  }
+}

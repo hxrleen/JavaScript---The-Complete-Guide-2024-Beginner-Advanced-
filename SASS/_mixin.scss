@@ -1,0 +1,38 @@
+@use "colors" as c;
+@use "font" as f;
+
+@mixin button {
+  font-size: 14px;
+  color: #fff;
+  background: c.$brightred;
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 50px;
+  border: none;
+  transition: 0.3s;
+  font-size: f.$font-famliy1;
+}
+
+@mixin error {
+  font-size: 14px;
+  color: #fff;
+  background: c.$brightred;
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 50px;
+  border: none;
+  transition: 0.3s;
+  font-size: f.$font-famliy1;
+}
+
+@mixin submit {
+  font-size: 14px;
+  color: #fff;
+  background: c.$brightred;
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 50px;
+  border: none;
+  transition: 0.3s;
+  font-size: f.$font-famliy1;
+}
