@@ -97,19 +97,7 @@ li a:hover:not(.active) {
     text-align: center;
   }
 
-  li {
-    float: none;
-    width: 100%;
-    text-align: center;
-  }
-
-  .navlist {
-    padding: 0;
-  }
-
-  li a {
-    padding: 10px;
-  }
+  
 }
 
 /* Hero Section */
@@ -169,10 +157,6 @@ li a:hover:not(.active) {
     padding: 20px;
   }
 
-  .hero-subtxt {
-    font-size: 16px;
-    margin-top: 20px;
-  }
 
   @media screen and (max-width: 600px) {
     .hero-heading {
