@@ -5,9 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Zomato-like Page</title>
     <link href="main.css" rel="stylesheet" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato:400,400i,700"
+    />
   </head>
   <body>
-    <div class="image"></div>
+    <!-- <div class="image"></div> -->
     <header>
       <h1>Welcome to My Zomato-like Page!</h1>
       <button class="button">Next</button>
@@ -25,75 +42,215 @@
       </ul>
     </nav>
 
-    <div class="hero-image">
-      <h2>Find the Best Restaurants Near You</h2>
+    <div class="searchbar">
+      <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+          <div class="search">
+            <input
+              class="search_input"
+              type="text"
+              name=""
+              placeholder="Search for restaurants..."
+            />
+            <a href="#" class="search_icon"><i class="fa fa-search"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="search-box">
-      <form>
-        <input type="text" placeholder="Search for restaurants..." />
-        <input type="submit" value="Search" />
-      </form>
-    </div>
+
+    <div class="zomatoimg"></div>
+
     <div class="restaurant-list">
-      <div class="restaurant-card">
-        <img src="https://via.placeholder.com/300" alt="Restaurant 1" />
-        <h3>Restaurant 1</h3>
-        <p>123 Main Street, City</p>
-        <a href="#">View Menu</a>
+      <div class="cards-container">
+        <div class="card">
+          <div
+            class="card-media"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1615719413546-198b25453f85?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzMDQwMjkwNA&ixlib=rb-1.2.1&q=85');
+            "
+          >
+            <div class="opac"></div>
+            <div class="discount">
+              30% OFF
+              <p>Up to &#x20b9;40</p>
+            </div>
+            <div class="pro-discount">PRO extra 6% OFF</div>
+            <div class="delivery-time">20 mins</div>
+            <div class="bookmark"></div>
+          </div>
+          <div class="card-description">
+            <div class="about-place">
+              <div class="place">
+                <p class="place-name">Pizza Hut</p>
+                <p class="place-speciality">Italian, Fast Food, Beverages</p>
+              </div>
+              <div class="place-review">
+                <p class="rating">4.6 &#x2605;</p>
+                <p class="per-person">&#x20b9; 200 per one</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="restaurant-card">
-        <img src="https://via.placeholder.com/300" alt="Restaurant 2" />
-        <h3>Restaurant 2</h3>
-        <p>456 Park Avenue, Town</p>
-        <a href="#">View Menu</a>
+
+      <div class="cards-container">
+        <div class="card">
+          <div
+            class="card-media"
+            style="
+              background-image: url('https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg');
+            "
+          >
+            <div class="opac"></div>
+            <div class="discount">
+              40% OFF
+              <p>Up to ₹90</p>
+            </div>
+            <div class="pro-discount">PRO extra 20% OFF</div>
+            <div class="delivery-time">26 mins</div>
+            <div class="bookmark"></div>
+          </div>
+          <div class="card-description">
+            <div class="about-place">
+              <div class="place">
+                <p class="place-name">McDonalds</p>
+                <p class="place-speciality">Fast Food, Beverages</p>
+              </div>
+              <div class="place-review">
+                <p class="rating">4.3 ★</p>
+                <p class="per-person">₹ 250 per one</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="restaurant-card">
-        <img src="https://via.placeholder.com/300" alt="Restaurant 3" />
-        <h3>Restaurant 3</h3>
-        <p>789 Garden Road, Village</p>
-        <a href="#">View Menu</a>
+
+      <div class="cards-container">
+        <div class="card">
+          <div
+            class="card-media"
+            style="
+              background-image: url('https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?cs=srgb&dl=pexels-ash-122861-376464.jpg&fm=jpg');
+            "
+          >
+            <div class="opac"></div>
+            <div class="discount">
+              10% OFF
+              <p>Up to &#x20b9;70</p>
+            </div>
+            <div class="pro-discount">PRO extra 15% OFF</div>
+            <div class="delivery-time">45 mins</div>
+            <div class="bookmark"></div>
+          </div>
+          <div class="card-description">
+            <div class="about-place">
+              <div class="place">
+                <p class="place-name">Dominos</p>
+                <p class="place-speciality">Italian, Fast Food, Beverages</p>
+              </div>
+              <div class="place-review">
+                <p class="rating">3.9 &#x2605;</p>
+                <p class="per-person">&#x20b9; 300 per one</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="restaurant-card">
-        <img src="https://via.placeholder.com/300" alt="Restaurant 4" />
-        <h3>Restaurant 4</h3>
-        <p>101 Lake View, Resort City</p>
-        <a href="#">View Menu</a>
+
+      <div class="cards-container">
+        <div class="card">
+          <div
+            class="card-media"
+            style="
+              background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROTTYSI2XCuY6kX3yj11R6QW8PK59XWrMRx9brBwE1862BNutRzmedYGEsowigLSH85uM&usqp=CAU');
+            "
+          >
+            <div class="opac"></div>
+            <div class="discount">
+              35% OFF
+              <p>Up to &#x20b9;90</p>
+            </div>
+            <div class="pro-discount">PRO extra 15% OFF</div>
+            <div class="delivery-time">18 mins</div>
+            <div class="bookmark"></div>
+          </div>
+          <div class="card-description">
+            <div class="about-place">
+              <div class="place">
+                <p class="place-name">Haldirams's</p>
+                <p class="place-speciality">Indian, Beverages</p>
+              </div>
+              <div class="place-review">
+                <p class="rating">4.1 &#x2605;</p>
+                <p class="per-person">&#x20b9; 400 per one</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="restaurant-card">
-        <img src="https://via.placeholder.com/300" alt="Restaurant 5" />
-        <h3>Restaurant 5</h3>
-        <p>111 High Street, Seaside Town</p>
-        <a href="#">View Menu</a>
+
+      <div class="cards-container">
+        <div class="card">
+          <div
+            class="card-media"
+            style="
+              background-image: url('https://media.cnn.com/api/v1/images/stellar/prod/140430115517-06-comfort-foods.jpg?q=x_0,y_0,h_720,w_1280,c_fill/w_800');
+            "
+          >
+            <div class="opac"></div>
+            <div class="discount">
+              15% OFF
+              <p>Up to &#x20b9;70</p>
+            </div>
+            <div class="pro-discount">PRO extra 25% OFF</div>
+            <div class="delivery-time">21 mins</div>
+            <div class="bookmark"></div>
+          </div>
+          <div class="card-description">
+            <div class="about-place">
+              <div class="place">
+                <p class="place-name">Burger King</p>
+                <p class="place-speciality">Fast Food, Beverages</p>
+              </div>
+              <div class="place-review">
+                <p class="rating">4.0 &#x2605;</p>
+                <p class="per-person">&#x20b9; 100 per one</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="restaurant-card">
-        <img src="https://via.placeholder.com/300" alt="Restaurant 6" />
-        <h3>Restaurant 6</h3>
-        <p>222 Mountain View, Hillside Village</p>
-        <a href="#">View Menu</a>
-      </div>
-      <div class="restaurant-card">
-        <img src="https://via.placeholder.com/300" alt="Restaurant 7" />
-        <h3>Restaurant 7</h3>
-        <p>333 Sunset Boulevard, Ocean City</p>
-        <a href="#">View Menu</a>
-      </div>
-      <div class="restaurant-card">
-        <img src="https://via.placeholder.com/300" alt="Restaurant 8" />
-        <h3>Restaurant 8</h3>
-        <p>444 Sunrise Avenue, Beachside Town</p>
-        <a href="#">View Menu</a>
-      </div>
-      <div class="restaurant-card">
-        <img src="https://via.placeholder.com/300" alt="Restaurant 9" />
-        <h3>Restaurant 9</h3>
-        <p>555 Forest Road, Woodland Village</p>
-        <a href="#">View Menu</a>
-      </div>
-      <div class="restaurant-card">
-        <img src="https://via.placeholder.com/300" alt="Restaurant 10" />
-        <h3>Restaurant 10</h3>
-        <p>666 City Center, Metropolitan City</p>
-        <a href="#">View Menu</a>
+
+      <div class="cards-container">
+        <div class="card">
+          <div
+            class="card-media"
+            style="
+              background-image: url('https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/3/21/0/fnd_pasta-istock.jpg.rend.hgtvcom.1280.720.suffix/1490188710731.jpeg');
+            "
+          >
+            <div class="opac"></div>
+            <div class="discount">
+              5% OFF
+              <p>Up to &#x20b9;50</p>
+            </div>
+            <div class="pro-discount">PRO extra 20% OFF</div>
+            <div class="delivery-time">55 mins</div>
+            <div class="bookmark"></div>
+          </div>
+          <div class="card-description">
+            <div class="about-place">
+              <div class="place">
+                <p class="place-name">Belgian Waffles</p>
+                <p class="place-speciality">Desserts</p>
+              </div>
+              <div class="place-review">
+                <p class="rating">3.5 &#x2605;</p>
+                <p class="per-person">&#x20b9; 450 per one</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

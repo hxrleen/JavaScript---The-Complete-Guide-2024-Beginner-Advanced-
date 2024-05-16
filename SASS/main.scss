@@ -1,115 +1,25 @@
-@use "mixin";
-@import "colors.scss";
-@import "font.scss";
+@use "index" as *;
+@use "mixin" as m;
 
 body {
   margin: 0px;
 }
 
-.image {
-  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/33f55b111202195.5ffdfc0e91b0e.gif);
-  background-size: cover;
-  height: 500px;
-}
-
 header {
-  color: #000;
-  background-image: $grey;
-  text-align: center;
-  align-content: center;
-  font-family: "Verdana";
-  display: inline-block;
-  width: 100%;
-  height: 100px;
+  @include header(100%, 200px);
 }
 
 .button {
-  @include mixin.button;
+  @include button($white, 0.3s);
 }
-
 .error {
-  @include mixin.error;
+  @extend .button;
 }
-
 .submit {
-  @include mixin.submit;
+  @extend .button;
 }
 
-.navbar {
-  padding: 0px;
-  width: 100%;
-  background: #a9a9a94d;
-  height: 100px;
-  margin: 2% auto;
-}
-
-.navbar ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar li {
-  position: relative;
-}
-
-.navbar > ul > li {
-  white-space: nowrap;
-  padding: 10px 0 10px 28px;
-}
-
-.navbar a,
-.navbar a:focus {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 3px;
-  font-family: $font-famliy1;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-  color: $darkgrey;
-  white-space: nowrap;
-  transition: 0.3s;
-  position: relative;
-}
-
-.navbar a i,
-.navbar a:focus i {
-  font-size: 12px;
-  line-height: 0;
-  margin-left: 5px;
-}
-
-.navbar > ul > li > a:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -6px;
-  left: 0;
-  background-color: $red;
-  visibility: hidden;
-  width: 0px;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.navbar a:hover:before,
-.navbar li:hover > a:before,
-.navbar .active:before {
-  visibility: visible;
-  width: 100%;
-}
-
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover > a {
-  color: $black;
-}
+@include navbar-styles;
 
 @media (min-width: 1280px) and (max-width: 1366px) {
   .navbar ul {
@@ -119,4 +29,136 @@ header {
   .navbar > ul {
     left: -100%;
   }
+}
+
+//search
+
+.searchbar {
+  background-color: $white;
+  text-align: center;
+  align-content: center;
+  background-size: cover;
+  font-family: "Regular";
+  display: inline-block;
+  width: 100%;
+  height: 200px;
+}
+
+.search {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 30px;
+  background-color: $white;
+  border-radius: 40px;
+  border: $brightred solid;
+  padding: 15px;
+  margin: 20%;
+}
+
+.search_input {
+  color: $white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  margin-top: 5px;
+  caret-color: transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+}
+
+.search .search_input {
+  padding: 0 10px;
+  width: 550px;
+  text-align: left;
+  margin: auto;
+  caret-color: $brightred;
+  transition: width 0.4s linear;
+  color: $darkgrey;
+  font-size: "normal";
+}
+
+.search:hover > .search_icon {
+  background: $brightred;
+  color: $white;
+}
+
+.search_icon {
+  height: 50px;
+  width: 50px;
+  float: right;
+  display: flex;
+  bottom: 10px;
+  text-decoration: none;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  border-radius: 50%;
+  color: $white;
+  background-color: $black;
+}
+
+.zomatoimg {
+  @include zomatoimg;
+}
+
+.restaurant-list {
+  @include m.restaurant-list;
+}
+
+.cards-container {
+  @include m.cards-container;
+}
+
+.opac {
+  @include m.opac;
+}
+
+.card {
+  @include m.card;
+}
+
+.card .card-media {
+  @include m.card-media;
+  // background-image: url();
+}
+
+.card .card-media .discount {
+  @include m.card-media-discount;
+}
+
+.card .card-media .discount p {
+  @include m.card-media-discount-p;
+}
+
+.card .card-media .pro-discount {
+  @include m.card-media-pro-discount;
+}
+
+.card .card-media .delivery-time {
+  @include m.card-media-delivery-time;
+}
+
+.card .card-description {
+  @include m.card-description;
+}
+
+.card .card-description .about-place {
+  @include m.card-description-about-place;
+}
+
+.card .card-description .about-place .place-name {
+  @include m.card-description-about-place-name;
+}
+
+.card .card-description .about-place .place-speciality {
+  @include m.card-description-about-place-speciality;
+}
+
+.card .card-description .about-place .per-person {
+  @include m.card-description-about-place-per-person;
+}
+
+.card .card-description .about-place .rating {
+  @include m.card-description-about-place-rating;
 }

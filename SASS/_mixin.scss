@@ -1,38 +1,252 @@
 @use "colors" as c;
 @use "font" as f;
 
-@mixin button {
-  font-size: 14px;
-  color: #fff;
-  background: c.$brightred;
-  padding: 8px 20px;
-  margin-left: 30px;
-  border-radius: 50px;
-  border: none;
-  transition: 0.3s;
-  font-size: f.$font-famliy1;
+@mixin header($width, $height) {
+  color: c.$black;
+  background-image: url(https://as2.ftcdn.net/v2/jpg/05/64/97/31/1000_F_564973106_xO0n1BvNmsFy2Sj2SK2Uy2pzH3hDqeDy.jpg);
+  text-align: center;
+  align-content: center;
+  background-size: cover;
+  font-family: "Regular";
+  display: inline-block;
+  width: $width;
+  height: $height;
 }
 
-@mixin error {
-  font-size: 14px;
-  color: #fff;
-  background: c.$brightred;
+@mixin button($btn-color, $btn-transition) {
+  font-size: f.$base-size;
+  color: $btn-color;
   padding: 8px 20px;
   margin-left: 30px;
+  background-color: c.$brightred;
   border-radius: 50px;
   border: none;
-  transition: 0.3s;
-  font-size: f.$font-famliy1;
+  transition: $btn-transition;
+  font-size: "Regular";
 }
 
-@mixin submit {
+// @mixin error {
+//   font-size: f.$base-size;
+//   color: #fff;
+//   background: c.$brightred;
+//   padding: 8px 20px;
+//   margin-left: 30px;
+//   border-radius: 50px;
+//   border: none;
+//   transition: 0.3s;
+//   font-size: "Regular";
+// }
+
+// @mixin submit {
+//   font-size: 14px;
+//   color: #fff;
+//   background: c.$brightred;
+//   padding: 8px 20px;
+//   margin-left: 30px;
+//   border-radius: 50px;
+//   border: none;
+//   transition: 0.3s;
+//   font-size: "Regular";
+// }
+
+@mixin navbar-styles {
+  nav {
+    height: 100px;
+    background-color: black;
+    align-content: center;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+  }
+  li {
+    position: relative;
+  }
+  nav > ul > li {
+    white-space: nowrap;
+    padding: 10px 0 10px 28px;
+  }
+  a,
+  a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3px;
+    font-family: "Regular";
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: c.$white;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+  }
+  a i,
+  a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  nav > ul > li > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: c.$red;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  a:hover:before,
+  li:hover > a:before,
+  .active:before {
+    visibility: visible;
+    width: 100%;
+  }
+  a:hover,
+  .active,
+  .active:focus,
+  li:hover > a {
+    color: c.$white;
+  }
+}
+
+@mixin zomatoimg {
+  background-image: url("https://media.istockphoto.com/id/1125918613/vector/vector-set-of-design-templates-and-elements-for-food-and-drink-in-trendy-linear-style.jpg?s=612x612&w=0&k=20&c=q7FXAex35aXqGKQ0QX-TJ4EPUNKP-fD0umaO58GEp9I=");
+  height: 150px;
+  margin: 0% 3% 3% 3%;
+  justify-content: center;
+  background-size: contain;
+  border-radius: 15px;
+}
+
+@mixin restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 1%;
+  margin-left: 2%;
+}
+
+@mixin cards-container {
+  margin: 0 auto;
+  padding-top: 20px;
+  width: calc(33.33% - 20px);
+  margin: 5px;
+}
+
+@mixin opac {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: c.$black;
+  left: 0;
+  opacity: 0.4;
+  top: 0;
+}
+
+@mixin card {
+  background-color: c.$white;
+  box-shadow: 10px 10px 40px 2px c.$lightgrey;
+  display: inline-block;
+  width: 375px;
+  border-radius: 10px;
+}
+
+@mixin card-media {
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  object-fit: fit;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+
+@mixin card-media-discount {
   font-size: 14px;
-  color: #fff;
-  background: c.$brightred;
-  padding: 8px 20px;
+  position: absolute;
+  bottom: 21%;
+  padding: 2px 5px 2px 20px;
+  // background-color: c.$darkgreen;
+  border-radius: 0 4px 4px 0;
+  max-width: 60px;
+  left: 0;
+  color: c.$white;
+  font-weight: 700;
+}
+
+@mixin card-media-discount-p {
+  font-weight: 400;
+  // background-color: c.$darkgreen;
+}
+
+@mixin card-media-pro-discount {
+  font-size: 12px;
+  background-color: c.$red;
+  position: absolute;
+  bottom: 6%;
+  padding: 3px 5px;
+  background-color: c.$darkgreen;
+  border-radius: 0 4px 4px 0;
+  max-width: 110px;
+  left: 0;
+  color: c.$white;
+}
+
+@mixin card-media-delivery-time {
+  position: absolute;
+  background-color: c.$beige;
+  max-width: 60px;
+  padding: 3px 6px;
+  font-size: 12px;
+  right: 3%;
+  bottom: 6%;
+  border-radius: 4px;
+}
+
+@mixin card-description {
+  padding: 10px;
+}
+
+@mixin card-description-about-place {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin card-description-about-place-name {
+  font-weight: 600;
+  padding-bottom: 10px;
+  font-family: "Regular";
+  color: c.$kala;
+}
+
+@mixin card-description-about-place-speciality {
+  font-size: 14px;
+  color: c.$grey3;
+}
+
+@mixin card-description-about-place-per-person {
+  font-size: 14px;
+  color: c.$grey3;
+}
+
+@mixin card-description-about-place-rating {
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: c.$darkgreen;
+  color: c.$white;
+  font-weight: 700;
+  text-align: center;
+  padding: 2px 0;
+  margin-bottom: 6px;
   margin-left: 30px;
-  border-radius: 50px;
-  border: none;
-  transition: 0.3s;
-  font-size: f.$font-famliy1;
 }

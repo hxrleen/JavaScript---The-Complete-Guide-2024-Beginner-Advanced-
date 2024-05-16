@@ -1,105 +1,97 @@
+@font-face {
+  font-family: "Regular";
+  src: url("font/MarkOT-Regular.woff") format("woff"), url("fonts/MarkOT-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Medium";
+  src: url("fonts/MarkOT-Medium.woff") format("woff"), url("fonts/MarkOT-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bold";
+  src: url("fonts/MarkOT-Bold.woff") format("woff"), url("fonts/MarkOT-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   margin: 0px;
 }
 
-.image {
-  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/33f55b111202195.5ffdfc0e91b0e.gif);
-  background-size: cover;
-  height: 500px;
-}
-
 header {
   color: #000;
-  background-image: #f8f8f8;
+  background-image: url(https://as2.ftcdn.net/v2/jpg/05/64/97/31/1000_F_564973106_xO0n1BvNmsFy2Sj2SK2Uy2pzH3hDqeDy.jpg);
   text-align: center;
   align-content: center;
-  font-family: "Verdana";
+  background-size: cover;
+  font-family: "Regular";
   display: inline-block;
   width: 100%;
+  height: 200px;
+}
+
+.button, .submit, .error {
+  font-size: 14px;
+  color: #fff;
+  padding: 8px 20px;
+  margin-left: 30px;
+  background-color: #ce1212;
+  border-radius: 50px;
+  border: none;
+  transition: 0.3s;
+  font-size: "Regular";
+}
+
+nav {
   height: 100px;
+  background-color: black;
+  align-content: center;
 }
 
-.button {
-  font-size: 14px;
-  color: #fff;
-  background: #ce1212;
-  padding: 8px 20px;
-  margin-left: 30px;
-  border-radius: 50px;
-  border: none;
-  transition: 0.3s;
-  font-size: "Verdana";
-}
-
-.error {
-  font-size: 14px;
-  color: #fff;
-  background: #ce1212;
-  padding: 8px 20px;
-  margin-left: 30px;
-  border-radius: 50px;
-  border: none;
-  transition: 0.3s;
-  font-size: "Verdana";
-}
-
-.submit {
-  font-size: 14px;
-  color: #fff;
-  background: #ce1212;
-  padding: 8px 20px;
-  margin-left: 30px;
-  border-radius: 50px;
-  border: none;
-  transition: 0.3s;
-  font-size: "Verdana";
-}
-
-.navbar {
-  padding: 0;
-}
-
-.navbar ul {
+ul {
   margin: 0;
   padding: 0;
   display: flex;
   list-style: none;
+  justify-content: center;
   align-items: center;
 }
 
-.navbar li {
+li {
   position: relative;
 }
 
-.navbar > ul > li {
+nav > ul > li {
   white-space: nowrap;
   padding: 10px 0 10px 28px;
 }
 
-.navbar a,
-.navbar a:focus {
+a,
+a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 3px;
-  font-family: "Verdana";
+  font-family: "Regular";
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-  color: #37373f;
+  color: #fff;
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
 }
 
-.navbar a i,
-.navbar a:focus i {
+a i,
+a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
 }
 
-.navbar > ul > li > a:before {
+nav > ul > li > a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -112,18 +104,18 @@ header {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.navbar a:hover:before,
-.navbar li:hover > a:before,
-.navbar .active:before {
+a:hover:before,
+li:hover > a:before,
+.active:before {
   visibility: visible;
   width: 100%;
 }
 
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover > a {
-  color: #000;
+a:hover,
+.active,
+.active:focus,
+li:hover > a {
+  color: #fff;
 }
 
 @media (min-width: 1280px) and (max-width: 1366px) {
@@ -133,4 +125,201 @@ header {
   .navbar > ul {
     left: -100%;
   }
+}
+.searchbar {
+  background-color: #fff;
+  text-align: center;
+  align-content: center;
+  background-size: cover;
+  font-family: "Regular";
+  display: inline-block;
+  width: 100%;
+  height: 200px;
+}
+
+.search {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 40px;
+  border: #ce1212 solid;
+  padding: 15px;
+  margin: 20%;
+}
+
+.search_input {
+  color: #fff;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  margin-top: 5px;
+  caret-color: transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+}
+
+.search .search_input {
+  padding: 0 10px;
+  width: 550px;
+  text-align: left;
+  margin: auto;
+  caret-color: #ce1212;
+  transition: width 0.4s linear;
+  color: #37373f;
+  font-size: "normal";
+}
+
+.search:hover > .search_icon {
+  background: #ce1212;
+  color: #fff;
+}
+
+.search_icon {
+  height: 50px;
+  width: 50px;
+  float: right;
+  display: flex;
+  bottom: 10px;
+  text-decoration: none;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #000;
+}
+
+.zomatoimg {
+  background-image: url("https://media.istockphoto.com/id/1125918613/vector/vector-set-of-design-templates-and-elements-for-food-and-drink-in-trendy-linear-style.jpg?s=612x612&w=0&k=20&c=q7FXAex35aXqGKQ0QX-TJ4EPUNKP-fD0umaO58GEp9I=");
+  height: 150px;
+  margin: 0% 3% 3% 3%;
+  justify-content: center;
+  background-size: contain;
+  border-radius: 15px;
+}
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 1%;
+  margin-left: 2%;
+}
+
+.cards-container {
+  margin: 0 auto;
+  padding-top: 20px;
+  width: calc(33.33% - 20px);
+  margin: 5px;
+}
+
+.opac {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  left: 0;
+  opacity: 0.4;
+  top: 0;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 10px 10px 40px 2px rgba(128, 128, 128, 0.4);
+  display: inline-block;
+  width: 375px;
+  border-radius: 10px;
+}
+
+.card .card-media {
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  -o-object-fit: fit;
+     object-fit: fit;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+
+.card .card-media .discount {
+  font-size: 14px;
+  position: absolute;
+  bottom: 21%;
+  padding: 2px 5px 2px 20px;
+  border-radius: 0 4px 4px 0;
+  max-width: 60px;
+  left: 0;
+  color: #fff;
+  font-weight: 700;
+}
+
+.card .card-media .discount p {
+  font-weight: 400;
+}
+
+.card .card-media .pro-discount {
+  font-size: 12px;
+  background-color: #ef4f5f;
+  position: absolute;
+  bottom: 6%;
+  padding: 3px 5px;
+  background-color: rgba(10, 109, 10, 0.8);
+  border-radius: 0 4px 4px 0;
+  max-width: 110px;
+  left: 0;
+  color: #fff;
+}
+
+.card .card-media .delivery-time {
+  position: absolute;
+  background-color: #f5f5f5;
+  max-width: 60px;
+  padding: 3px 6px;
+  font-size: 12px;
+  right: 3%;
+  bottom: 6%;
+  border-radius: 4px;
+}
+
+.card .card-description {
+  padding: 10px;
+}
+
+.card .card-description .about-place {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .card-description .about-place .place-name {
+  font-weight: 600;
+  padding-bottom: 10px;
+  font-family: "Regular";
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.card .card-description .about-place .place-speciality {
+  font-size: 14px;
+  color: rgba(128, 128, 128, 0.97);
+}
+
+.card .card-description .about-place .per-person {
+  font-size: 14px;
+  color: rgba(128, 128, 128, 0.97);
+}
+
+.card .card-description .about-place .rating {
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: rgba(10, 109, 10, 0.8);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  padding: 2px 0;
+  margin-bottom: 6px;
+  margin-left: 30px;
 }/*# sourceMappingURL=main.css.map */

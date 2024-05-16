@@ -1,3 +1,23 @@
-$font-size: 1.4rem;
-$font-family: "Arial";
-$font-famliy1: "Verdana";
+@font-face {
+  font-family: "Regular";
+  src: url("font/MarkOT-Regular.woff") format("woff"),
+    url("fonts/MarkOT-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Medium";
+  src: url("fonts/MarkOT-Medium.woff") format("woff"),
+    url("fonts/MarkOT-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bold";
+  src: url("fonts/MarkOT-Bold.woff") format("woff"),
+    url("fonts/MarkOT-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$base-size: 14px;
