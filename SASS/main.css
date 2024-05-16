@@ -21,13 +21,13 @@ body {
 }
 
 header {
-  color: #000;
   background-image: url(https://as2.ftcdn.net/v2/jpg/05/64/97/31/1000_F_564973106_xO0n1BvNmsFy2Sj2SK2Uy2pzH3hDqeDy.jpg);
   text-align: center;
   align-content: center;
   background-size: cover;
   font-family: "Regular";
   display: inline-block;
+  color: #000;
   width: 100%;
   height: 200px;
 }
