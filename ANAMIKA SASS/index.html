@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anamika</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style></style>
+  </head>
+  <body>
+    <section id="topheader">
+      <div class="topheader">
+        <div class="row">
+          <div class="topheader-flex">
+            <ul class="top-bar-content">
+              <li class="top-bar-text">Free Shipping for orders over $100</li>
+            </ul>
+            <ul class="top-icons">
+              <li>
+                <a href="#" class="top-header-icon" aria-label="Log in">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
+                    role="img"
+                    aria-labelledby="login-icon-title"
+                  >
+                    <title id="login-icon-title">Log in</title>
+                    <g>
+                      <path
+                        d="M46.8,57c0.9,0,1.8,0,2.7,0c12,0,19.2-13.2,20.7-23.7c0.3-1.5,0.6-3.3,0.6-5.1C70.9,15.5,62.8,5,49.5,5 S28.2,15.5,28.2,28.2C28.2,39.6,34.5,54.6,46.8,57z"
+                      ></path>
+                      <path
+                        d="M64.3,60.6c-3.6-0.9-4.8-0.6-6.9,5.1l-7.2,20.7l-7.5-20.7c-2.1-5.7-3.3-6-6.9-5.1c-15.3,3.3-24,3.9-23.7,20.1 v10.2c0,2.6,1.5,4,3,4h69.9c1.6,0,3.1-1.4,3.1-4.1V80.7C88.3,64.5,79.6,63.9,64.3,60.6z"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/cart"
+                  class="header__icon header__icon--cart"
+                  id="cart-icon-bubble"
+                  role="button"
+                  aria-haspopup="dialog"
+                  aria-label="Cart"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
+                    role="img"
+                    aria-labelledby="cart-icon-title"
+                  >
+                    <title id="cart-icon-title">Cart</title>
+                    <g>
+                      <path
+                        d="M94.4,22.7c-0.4-0.1-0.8-0.2-1.2-0.2H77.5h-7.8H46.1h-7.8h-9.8L25,12.8c-2.1-6-7.8-10-14.2-9.9H6.8c-2.2,0-3.9,1.8-3.9,3.9 s1.8,3.9,3.9,3.9h3.9c3,0,5.7,1.9,6.7,4.7l15.2,42.4c1.7,4.7,6.1,7.8,11.1,7.8h32c5.1,0,9.6-3.2,11.2-8l10-30 C97.6,25.6,96.5,23.4,94.4,22.7z"
+                      ></path>
+                      <circle cx="42.1" cy="85.3" r="11.8"></circle>
+                      <circle cx="73.5" cy="85.3" r="11.8"></circle>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/pages/wishlist"
+                  class="header__icon header__icon--wishlist"
+                  aria-label="Wishlist"
+                >
+                  <svg
+                    class="heart-filled"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
+                    role="img"
+                    aria-labelledby="wishlist-icon-title"
+                  >
+                    <title id="wishlist-icon-title"></title>
+                    <path
+                      d="M87.9,15.9c-10.6-10.6-27.5-10.6-38.1,0c-10.6-10.6-27.5-10.6-38.1,0S1.1,43.4,11.7,54l38.1,38.1L87.9,54 C99,43.4,99,26.4,87.9,15.9z M81.1,30.9c-2.6,2.6-7.4,2.6-10.1,0c-2.6-2.6-2.6-7.4,0-10.1c2.6-2.6,7.4-2.6,10.1,0 S83.7,28.3,81.1,30.9z"
+                    ></path>
+                  </svg>
+                  <span class="icon__fallback-text"></span>
+                  <div class="dtxc-wishlist-count cart-count-bubble">
+                    <div class="grid-count-bubble">
+                      <span aria-hidden="true"></span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+        id="ftco-navbar"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><img
+              srcset="
+                //anamika-theme.myshopify.com/cdn/shop/files/header-logo_300x300_1.png?v=1679303846&amp;width=250 1x,
+                //anamika-theme.myshopify.com/cdn/shop/files/header-logo_300x300_1.png?v=1679303846&amp;width=500 2x
+              "
+              src="//anamika-theme.myshopify.com/cdn/shop/files/header-logo_300x300_1.png?v=1679303846&amp;width=250"
+              loading="lazy"
+              class="header__heading-logo"
+              width="250"
+              height="34"
+              alt="anamika-theme (password: buddha)"
+          /></a>
+          <form action="#" class="searchform order-sm-start order-lg-last">
+            <div class="form-group d-flex">
+              <input
+                type="text"
+                class="form-control pl-3"
+                placeholder="Search"
+              />
+              <button type="submit" placeholder="" class="form-control search">
+                <span class="fa fa-search"></span>
+              </button>
+            </div>
+          </form>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#ftco-nav"
+            aria-controls="ftco-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="fa fa-bars"></span> Menu
+          </button>
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item active">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">New Trends</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Collections</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdown04"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Shop</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdown04"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Pages</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+  </body>
+</html>
