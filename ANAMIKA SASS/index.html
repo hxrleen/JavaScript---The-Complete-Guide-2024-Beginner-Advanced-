@@ -111,42 +111,53 @@
         id="ftco-navbar"
       >
         <div class="container">
-          <a class="navbar-brand" href="index.html"
-            ><img
-              srcset="
-                //anamika-theme.myshopify.com/cdn/shop/files/header-logo_300x300_1.png?v=1679303846&amp;width=250 1x,
-                //anamika-theme.myshopify.com/cdn/shop/files/header-logo_300x300_1.png?v=1679303846&amp;width=500 2x
-              "
-              src="//anamika-theme.myshopify.com/cdn/shop/files/header-logo_300x300_1.png?v=1679303846&amp;width=250"
-              loading="lazy"
-              class="header__heading-logo"
-              width="250"
-              height="34"
-              alt="anamika-theme (password: buddha)"
-          /></a>
-          <form action="#" class="searchform order-sm-start order-lg-last">
-            <div class="form-group d-flex">
-              <input
-                type="text"
-                class="form-control pl-3"
-                placeholder="Search"
-              />
-              <button type="submit" placeholder="" class="form-control search">
-                <span class="fa fa-search"></span>
-              </button>
-            </div>
-          </form>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#ftco-nav"
-            aria-controls="ftco-nav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="fa fa-bars"></span> Menu
-          </button>
+          <div class="flex-1">
+            <form action="#" class="searchform">
+              <!--order-sm-start order-lg-last-->
+              <div class="form-group d-flex">
+                <button
+                  type="submit"
+                  placeholder=""
+                  class="form-control search"
+                >
+                  <span class="fa fa-search"></span>
+                </button>
+                <input
+                  type="text"
+                  class="form-control pl-3"
+                  placeholder="Search"
+                />
+              </div>
+            </form>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#ftco-nav"
+              aria-controls="ftco-nav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="fa fa-bars"></span> Menu
+            </button>
+          </div>
+
+          <div class="flex-2">
+            <a class="navbar-brand" href="index.html"
+              ><img
+                srcset="
+                  //anamika-theme.myshopify.com/cdn/shop/files/header-logo_300x300_1.png?v=1679303846&amp;width=250 1x,
+                  //anamika-theme.myshopify.com/cdn/shop/files/header-logo_300x300_1.png?v=1679303846&amp;width=500 2x
+                "
+                src="//anamika-theme.myshopify.com/cdn/shop/files/header-logo_300x300_1.png?v=1679303846&amp;width=250"
+                loading="lazy"
+                class="header__heading-logo"
+                width="250"
+                height="34"
+                alt="anamika-theme (password: buddha)"
+            /></a>
+          </div>
+
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav m-auto">
               <li class="nav-item active">
