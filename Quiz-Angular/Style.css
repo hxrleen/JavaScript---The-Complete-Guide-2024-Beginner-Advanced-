@@ -1,0 +1,132 @@
+/* Style.css */
+
+* {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+body {
+  background-color: #e01d7f;
+}
+
+.quiz,
+.scores {
+  margin: 50px auto 0 auto;
+  max-width: 400px;
+}
+
+#top {
+  color: green;
+}
+
+.containerNew {
+  border: 5px solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 580px;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: white;
+}
+
+p {
+  margin: 15px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.landing {
+  text-align: center;
+}
+
+.scoresHeader {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.timer {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+button {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #f62a91;
+  border-radius: 5px;
+  border: 0;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+  background-color: #e01d7f;
+}
+
+.options button {
+  display: block;
+}
+
+input[type="text"] {
+  font-size: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.feedback {
+  font-style: bold;
+  font-size: 120%;
+  margin-top: 20px;
+  padding-top: 15px;
+  color: #fff;
+  border-top: 2px solid #4b0082;
+}
+
+ol {
+  padding-left: 15px;
+  max-height: 600px;
+  overflow: auto;
+}
+
+li {
+  padding: 5px;
+  list-style: decimal inside none;
+}
+
+li:nth-child(odd) {
+  background-color: #dfdae7;
+}
+
+@media screen and (max-width: 768px) {
+  .containerNew {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .containerNew {
+    width: 90%;
+  }
+
+  .quiz,
+  .scores {
+    max-width: 90%;
+  }
+}
