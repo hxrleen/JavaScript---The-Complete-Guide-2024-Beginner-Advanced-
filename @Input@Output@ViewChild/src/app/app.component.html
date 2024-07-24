@@ -1,0 +1,14 @@
+<div style="border: 10px solid green;">
+<h1 class="margin-left">{{ title }}</h1>
+    <span class="margin-left"> Display Message From Child </span>
+  <textarea>{{messageFromChild}}</textarea>
+  <br />
+  <br />
+  <!-- <div style="display: inline;" class="margin-left">Search Employee: <input type="text" [(ngModel)]="searchText"/></div> -->
+
+<br/>
+  <br />
+  <app-child [messageFromParent]="searchText" #appchild
+  ></app-child>  
+<app-viewchild></app-viewchild>
+</div>  
